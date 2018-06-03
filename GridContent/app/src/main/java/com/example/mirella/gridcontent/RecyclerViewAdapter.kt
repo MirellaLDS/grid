@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 
-class RecyclerViewAdapter(var data: MutableList<Report>): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+class RecyclerViewAdapter(var data: List<Report>): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         var view: View
@@ -20,7 +20,7 @@ class RecyclerViewAdapter(var data: MutableList<Report>): RecyclerView.Adapter<R
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.image.setImageDrawable()
+        holder.image.setImageDrawable(data[position].image)
     }
 
 

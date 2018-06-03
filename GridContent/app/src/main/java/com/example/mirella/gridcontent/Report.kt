@@ -1,3 +1,5 @@
 package com.example.mirella.gridcontent
 
-data class Report(var image: String)
+import android.graphics.drawable.Drawable
+
+data class Report(var image: Drawable)
